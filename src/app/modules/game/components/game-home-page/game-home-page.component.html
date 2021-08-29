@@ -1,0 +1,31 @@
+<div class="game-home-page">
+    <div class="player-scoreboard">
+        <app-player-scoreboard></app-player-scoreboard>
+    </div>
+    <section class="actions">
+        <section class="throw-ball" *ngIf="!gameDone else winnerTemplateRef" >
+            <div class="player-turn">
+                <div>Player turn</div>
+                <div class="player-name">
+                    {{gameDetailsService.players[gameDetailsService.currentPlayer].name}}
+                </div>
+            </div>
+            <button class="throw-ball-btn" (click)="throwBall()">Throw ball</button>
+        </section>
+        <ng-template #winnerTemplateRef>
+            <section class="winner-section">
+                <div class="winner-label">Winner</div>
+                <app-player-detail class="winner-player" [player]="gameWinner"></app-player-detail>
+                <button class="throw-ball-btn" (click)="replayGame()">Replay !</button>
+            </section>
+        </ng-template>
+        <section class="home-section">
+            <img (click)="goToHome()" class="home-image" src="assets/images/home.png" alt="Home Image" />
+        </section>
+    </section>
+</div>
+
+<ng-particles *ngIf="gameDone"
+    [id]="ngParticlesId"
+    [options]="particlesOptions">
+</ng-particles>

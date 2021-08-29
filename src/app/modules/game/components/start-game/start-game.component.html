@@ -1,0 +1,27 @@
+<div class="start-game-wrapper">
+    <div class="start-game">
+
+        <form *ngIf="gameDetailsService.players.length < maxPlayersAllowed">
+            <h2 class="start-game-heading">Add Players</h2>
+            <div class="form-outer">
+                <input class="form-input" name="player-name" autocomplete="off"
+                placeholder="Enter Player Name" [(ngModel)]="playerName" 
+                />
+                <button class="add-player-btn" type="button"
+                    [disabled]="playerName.length < minPlayersNameLengthAllowed"
+                    (click)="addPlayer()">+
+                </button>
+            </div>
+        </form>
+        
+        <div class="players">
+            <ng-container *ngFor="let player of gameDetailsService.players">
+                <app-player-detail class="player" [player]="player"></app-player-detail>
+            </ng-container>
+        </div>
+        
+        <button class="start-the-game-btn" *ngIf="gameDetailsService.players.length >= minPlayersNameLengthAllowed" (click)="startTheGame()">
+            Start the Game !
+        </button>
+    </div>
+</div>

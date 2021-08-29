@@ -1,0 +1,14 @@
+<ng-container *ngFor="let player of gameDetailsService.players; let i = index">
+    <section class="player-scorecard" 
+        [appFocusSection]="(gameDetailsService.currentPlayer === i)"
+        focusClass="current-player">
+        <app-player-detail [player]="player">
+        </app-player-detail>
+        <app-bowling-frames class="player-frames"
+            [frames]="player.frames"
+            [activeFrames]="(gameDetailsService.currentPlayer === i)">
+        </app-bowling-frames>
+        <app-player-final-score [score]="player.finalScore">
+        </app-player-final-score>
+    </section>
+</ng-container>

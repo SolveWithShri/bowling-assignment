@@ -1,0 +1,14 @@
+.player-scorecard {
+    display: flex;
+    align-items: center;
+    background: #04000acc;
+    max-width: 1100px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 15px auto;
+    color: #fff;
+
+    &.current-player {
+        background-color: blueviolet;
+    }
+}

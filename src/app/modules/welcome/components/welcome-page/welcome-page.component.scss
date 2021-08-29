@@ -1,0 +1,27 @@
+.lets-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #04000acc;
+  width: 500px;
+  border-radius: 30px;
+  padding: 50px;
+  margin: 10px auto;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .lets-play-btn {
+    background: transparent;
+    font-family: "Lobster", cursive;
+    color: #fff;
+    border: none;
+    text-shadow: 0 0 35px #000;
+    cursor: pointer;
+    font-size: 90px;
+  }
+}

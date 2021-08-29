@@ -1,0 +1,21 @@
+.player-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  .image-wrapper {
+    margin-bottom: 0;
+    .image {
+      border: 2px solid;
+      border-radius: 100%;
+      height: 75px;
+      width: 75px;
+    }
+  }
+
+  .player-name {
+    font-size: 20px;
+    color: #fff;
+  }
+}

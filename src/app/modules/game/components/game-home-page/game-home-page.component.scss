@@ -1,0 +1,63 @@
+.game-home-page {
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #04000acc;
+    width: 300px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px auto;
+    color: #fff;
+    text-align: center;
+
+    .throw-ball {
+      .player-turn {
+        font-size: 25px;
+        margin-bottom: 20px;
+
+        .player-name {
+          font-size: 40px;
+          margin-top: 10px;
+          color: blueviolet;
+        }
+      }
+
+      .throw-ball-btn {
+        background: transparent;
+        font-family: "Lobster", cursive;
+        color: #fff;
+        border: none;
+        text-shadow: 0 0 35px #000;
+        cursor: pointer;
+        font-size: 50px;
+      }
+    }
+
+    .winner-section {
+      .winner-label {
+        font-size: 25px;
+      }
+
+      .throw-ball-btn {
+        background: transparent;
+        font-family: "Lobster", cursive;
+        color: #fff;
+        border: none;
+        text-shadow: 0 0 35px #000;
+        cursor: pointer;
+        font-size: 50px;
+      }
+    }
+
+    .home-section {
+      margin-top: 25px;
+
+      .home-image {
+        width: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+}

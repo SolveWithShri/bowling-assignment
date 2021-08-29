@@ -1,0 +1,16 @@
+<ng-container *ngFor="let frame of frames; let i = index">
+    <section class="frame" [appFocusSection]="activeFrames && (gameDetailsService.currentFrame === i)"
+        focusClass="current-frames">
+
+        <app-bowling-frame *ngIf="(i < 9) else tenthFrameTemplateRef"
+            [frame]="frame"
+            [activeFrame]="activeFrames && (gameDetailsService.currentFrame === i)">
+        </app-bowling-frame>
+
+        <ng-template #tenthFrameTemplateRef>
+            <app-bowling-frame-tenth [frame]="frame"
+                [activeFrame]="activeFrames && (gameDetailsService.currentFrame === i)">
+            </app-bowling-frame-tenth>
+        </ng-template>
+    </section>
+</ng-container>

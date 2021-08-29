@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <td [width]="25" [height]="25" 
+            [appFocusSection]="activeFrame && (gameDetailsService.currentRoll === bowlingRoll.FIRST)"
+            focusClass="current-frame">
+            {{ frame.firstBallDisplay }}
+        </td>
+        <td [width]="25" [height]="25"
+            [appFocusSection]="activeFrame && (gameDetailsService.currentRoll === bowlingRoll.SECOND)"
+            focusClass="current-frame">
+            {{ frame.secondBallDisplay }}
+        </td>
+    </tr>
+    <tr>
+        <td [colSpan]="2" [width]="50" [height]="25">
+            {{ frame.totalScore }}
+        </td>
+    </tr>
+</table>
